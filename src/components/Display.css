@@ -1,0 +1,101 @@
+.down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  width: 100%;
+}
+
+    .list {
+      overflow: scroll;
+      height: 90%;
+      width: 80%;
+      padding: 3%;
+      margin: 0 0 50px 0;
+      list-style: none;
+    }
+        .todoItem {
+          padding: 15px 10px;
+          margin: 3px 0;
+          border-radius: 4px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+        }
+        
+        .todo {
+          animation: appear .5s ease;
+          background-color: #C9E7FF;
+          color: black;
+          font-size: 20px;
+        }
+
+        .completed {
+          animation: disappear .5s ease;
+          background-color: #E8F5FF;
+          color: #D6D6D6;
+          font-size: 17px;
+        }
+        
+        @keyframes appear {
+          from {
+            background-color: #E8F5FF;
+            color: #D6D6D6;
+            font-size: 17px;
+          } to {
+            background-color: #C9E7FF;
+            color: black;
+            font-size: 20px;
+          }
+        }
+        
+        @keyframes disappear {
+          from {
+            background-color: #C9E7FF;
+            color: black;
+            font-size: 20px;
+          } to {
+            background-color: #E8F5FF;
+            color: #D6D6D6;
+            font-size: 17px;
+          }
+        }
+
+    .buttons {
+      position: fixed;
+      bottom: 20px;
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+    }
+        
+        .selected {
+          animation: bounce .7s ease;
+          color: #30A3FF;
+          font-size: 17px;
+        }
+        
+        .notselected {
+          text-decoration: none;
+          color: #8FCDFF;
+          font-size: 15px;
+        }
+        
+        @keyframes bounce {
+          from {
+            transform: translateY(0px);
+          } 40% {
+            transform: translateY(-6px);
+          } 60% {
+            transform: translateY(0px);
+          } 80% {
+            transform: translateY(-4px);
+          } 90% {
+            transform: translateY(0px);
+          } 95% {
+            transform: translateY(-2px);
+          } to {
+            transform: translateY(0px);
+          }
+        }
